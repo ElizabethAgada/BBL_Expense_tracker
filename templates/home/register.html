@@ -1,0 +1,97 @@
+{% extends 'base1.html' %}
+{% block body %}
+<div class="container">
+    <div class="login-section">
+        <div class="login-form">
+            <h3 class="text-center font-weight-light my-4">BBL Expense Tracker</h3>
+            <p class="text-center">Create your account</p>
+            <form action="/handleSignup/" method='post'>
+                {% csrf_token %}
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="small mb-1" for="uname">UserName</label>
+                            <input class="form-control py-4" id="uname" name="uname" type="text" placeholder="Enter User Name" required/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="small mb-1" for="fname">First Name</label>
+                            <input class="form-control py-4" id="fname" name="fname" type="text" placeholder="Enter first name"/>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="small mb-1" for="lname">Last Name</label>
+                            <input class="form-control py-4" id="lname" name="lname" type="text" placeholder="Enter last name"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="small mb-1" for="email">Email</label>
+                    <input class="form-control py-4" id="email" name="email" type="email" aria-describedby="emailHelp" placeholder="Enter email address" required/>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="small mb-1" for="profession">Profession</label>
+                            <select name="profession" id="profession" class="form-control">
+                                <option value="Employee">Employee</option>
+                                <option value="Business">Business</option>
+                                <option value="Student">Student</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="small mb-1" for="income">Income</label>
+                            <input class="form-control py-4" id="income" name="income" type="text" placeholder="Income" required/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="small mb-1" for="Savings">Savings</label>
+                            <input class="form-control py-4" id="Savings" name="Savings" type="text" placeholder="Amount to be saved" required/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="small mb-1" for="pass1">Password</label>
+                            <input class="form-control py-4" id="pass1" name="pass1" type="password" placeholder="Enter password" required/>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="small mb-1" for="pass2">Confirm Password</label>
+                            <input class="form-control py-4" id="pass2" name="pass2" type="password" placeholder="Confirm password" required/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group mt-4 mb-0">
+                    <button type="submit" class="btn btn-primary btn-block">Create User</button>
+                </div>
+                <div class="text-center mt-3">
+                    <a href="/" class="btn btn-outline-primary">Have an account? Go to login</a>
+                </div>
+            </form>
+        </div>
+        <div class="login-info">
+            <div class="info-content">
+                <h3>Expense Tracker</h3>
+                <p>Manage your expenses with ease.</p>
+            </div>
+            <div class="bg-image"></div>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}

@@ -1,0 +1,118 @@
+body, html {
+    height: 100%;
+    font-family: 'Big Shoulders Stencil Text', cursive;
+    color: #333; /* Dark color for text */
+    margin: 0;
+    padding: 0;
+    background-color: #001182; /* light background color for contrast */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-section {
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 900px; /* Adjust width as needed */
+    width: 100%; /* Ensure it scales with the container */
+}
+
+.login-form, .login-info {
+    padding: 2rem;
+    flex: 1;
+    position: relative; /* Ensure relative positioning */
+}
+
+.login-form {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #333; /* Dark color for text */
+}
+
+.login-info {
+    background-color: #f0f2f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white; /* Light color for text on background image */
+    position: relative; /* Ensure the text is over the image */
+    padding: 2rem; /* Add padding for spacing */
+}
+
+.info-content {
+    z-index: 1; /* Ensure text is on top of the image */
+    color: black;
+    font-weight: bolder;
+    font-size: 55;
+}
+
+.bg-image {
+    /* The image used */
+    background-image: url("../static/img/expense-tracking.png");
+    position: absolute; /* Position relative to .login-info */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    opacity: 0.8; /* Slightly transparent */
+    z-index: 0; /* Behind the text */
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    padding: 0.5rem;
+    width: 100%; /* Ensure it takes full width */
+}
+
+.btn {
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    width: 100%; /* Ensure it takes full width */
+    margin-top: 1rem; /* Add margin for spacing */
+}
+
+.btn-primary {
+    background-color: #001182;
+    border-color: #001182;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0062b3;
+    border-color: #0062b3;
+}
+
+.btn-outline-primary {
+    color: #001182;
+    border-color: #001182;
+    width: auto; /* Ensure it doesn't take full width */
+    padding: 0.5rem 1rem; /* Add padding for spacing */
+}
+
+.btn-outline-primary:hover {
+    background-color: #001182;
+    color: white;
+}
+
+.text-center a {
+    display: inline-block; /* Ensure proper alignment */
+    margin-top: 1rem; /* Add margin for spacing */
+}
